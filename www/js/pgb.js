@@ -5,12 +5,12 @@ function init() {
     document.addEventListener("offline", onOffline, false);
 }
 function startAcc() {
-    var options = { frequency: 3000 };  // Update every 3 seconds
+    var options = { frequency: 3000 };
 
-    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    watchingID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 function stopAcc() {
-    navigator.accelerometer.clearWatch(watchID);
+    navigator.accelerometer.clearWatch(watchingID);
 }
 function onDeviceReady() {
 	navigator.notification.beep(1);
@@ -54,7 +54,7 @@ function onOffline() {
 }
 function onSuccess(acceleration) {
 
-    var p = document.querySelector('#accText');
+    var p = document.querySelector('#accelerationContent');
 
     p.innerHTML='Acceleration X: ' +
         acceleration.x +
