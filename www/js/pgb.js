@@ -4,6 +4,7 @@ function init() {
 	document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 }
+
 function startAcc() {
     var options = { frequency: 3000 };
 
@@ -12,9 +13,10 @@ function startAcc() {
 function stopAcc() {
     navigator.accelerometer.clearWatch(watchingID);
 }
-function onDeviceReady() {
-	navigator.notification.beep(1);
-}
+
+// function onDeviceReady() {
+// 	navigator.notification.beep(1);
+// }
 
 function deviceInfo() {
 
