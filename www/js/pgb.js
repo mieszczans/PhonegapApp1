@@ -20,6 +20,7 @@ function deviceInfo() {
 	navigator.notification.alert(info);
 	
 }
+
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -35,3 +36,4 @@ function checkConnection() {
 
     alert('Connection type: ' + states[networkState]);
 }
+checkConnection();
