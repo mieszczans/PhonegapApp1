@@ -1,5 +1,7 @@
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
+	document.addEventListener("online", onOnline, false);
+    document.addEventListener("offline", onOffline, false);
 }
 
 function onDeviceReady() {
@@ -18,7 +20,6 @@ function deviceInfo() {
 			'Device Version : '  + device.version  + '\n';
 
 	navigator.notification.alert(info);
-	
 }
 
 function checkConnection() {
@@ -35,4 +36,11 @@ function checkConnection() {
     states[Connection.NONE] = 'No network connection';
 
     navigator.notification.alert('Connection type: ' + states[networkState]);
+}
+
+function onOnline() {
+    navigator.notification.alert("Online");
+}
+function onOffline() {
+    navigator.notification.alert("Offline");
 }
