@@ -1,9 +1,17 @@
+let watchingID = null;
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
 	document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 }
+function startAcc() {
+    var options = { frequency: 3000 };  // Update every 3 seconds
 
+    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+}
+function stopAcc() {
+    navigator.accelerometer.clearWatch(watchID);
+}
 function onDeviceReady() {
 	navigator.notification.beep(1);
 }
@@ -43,4 +51,21 @@ function onOnline() {
 }
 function onOffline() {
     navigator.notification.alert("Offline");
+}
+function onSuccess(acceleration) {
+
+    var p = document.querySelector('#accText');
+
+    p.innerHTML='Acceleration X: ' +
+        acceleration.x +
+        '<br/>' +
+        'Acceleration Y: ' +
+        acceleration.y +
+        '<br/>' +
+        'Acceleration Z: ' +
+        acceleration.z +
+        '<br/>' +
+        'Timestamp: ' +
+        acceleration.timestamp +
+        '<br/>';
 }
