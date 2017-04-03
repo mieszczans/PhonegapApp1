@@ -34,6 +34,6 @@ function checkConnection() {
     states[Connection.CELL] = 'Cell generic connection';
     states[Connection.NONE] = 'No network connection';
 
-    alert('Connection type: ' + states[networkState]);
+    navigator.notification.alert('Connection type: ' + states[networkState]);
 }
 checkConnection();
