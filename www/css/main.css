@@ -7,16 +7,15 @@ body{
     font-family: sans-serif;
 }
 .container{
-    width: auto;
-    height: 680px;
+    width: auto;    
+    height: 690px;
     background: url("../img/bg.jpg") no-repeat;
     background-size: cover;
+    box-sizing: border-box;
 }
 h1{
     margin: 0;
     padding: 0;
-}
-header h1{
     position: relative;
     left:42%;
     top:40px;
@@ -25,13 +24,40 @@ article{
     position: relative;
 }
 table{
+    min-width:410px; 
     position: absolute;
     top: 80px;
     left:30%;
-    border-spacing: 20px;
+    border-collapse: collapse;
     text-align: left;
 }
-table{
+tr{
     border-bottom: 1px solid white;
     border-color: white;
+}
+th, td{
+    padding: 10px;
+}
+.button{
+    position: relative;
+}
+@media only screen and (orientation: portrait){
+    .container{
+        width: 360px;
+        height: 640px;
+    }
+    h1{
+        left:40px;
+        top:10px;
+    }
+}
+@media only screen and (orientation: landscape){
+    .container{
+        width: 640px;
+        height: 340px;
+    }
+    h1{
+        left:40px;
+        top:10px;
+    }
 }
