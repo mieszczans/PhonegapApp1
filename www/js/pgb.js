@@ -1,4 +1,4 @@
-let watchingID = null;
+let watchID = null;
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
 	document.addEventListener("online", onOnline, false);
@@ -8,10 +8,10 @@ function init() {
 function startAcc() {
     var options = { frequency: 3000 };
 
-    watchingID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 function stopAcc() {
-    navigator.accelerometer.clearWatch(watchingID);
+    navigator.accelerometer.clearWatch(watchID);
 }
 
 // function onDeviceReady() {
@@ -70,4 +70,7 @@ function onSuccess(acceleration) {
         'Timestamp: ' +
         acceleration.timestamp +
         '<br/>';
+}
+function onError() {
+    navigator.notification.alert('onError!');
 }
