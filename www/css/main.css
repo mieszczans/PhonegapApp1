@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: sans-serif;
+}
+.container{
+    width: auto;
+    height: 680px;
+    background: url("../img/bg.jpg") no-repeat;
+    background-size: cover;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+header h1{
+    position: relative;
+    left:42%;
+    top:40px;
+}
+article{
+    position: relative;
+}
+table{
+    position: absolute;
+    top: 80px;
+    left:30%;
+    border-spacing: 20px;
+    text-align: left;
+}
+table{
+    border-bottom: 1px solid white;
+    border-color: white;
+}

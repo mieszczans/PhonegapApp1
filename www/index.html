@@ -2,11 +2,41 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="css/main.css">
 		<script src="js/pgb.js"></script>
 		<script src="cordova.js"></script>
 	</head>
 	<body onload="init()">
-		<h1>Hello World!</h1>
+		<div class="container">
+			<header>
+				<h1>Wizytówka</h1>
+			</header>
+			<article>
+				<table>
+					<tr>
+						<th>Imię</th>
+						<td>Sebastian</td>
+					</tr>
+					
+					<tr>
+						<th>Nazwisko</th>
+						<td>Mieszczańczyk</td>
+					</tr>
+					<tr>
+						<th>E-mail</th>
+						<td>sebastianmieszczanczyk@gmail.com</td>
+					</tr>
+					<tr>
+						<th>Album</th>
+						<td>9802</td>
+					</tr>
+					<tr>
+						<th>Field of study</th>
+						<td>Informatyka i Ekonometria</td>
+					</tr>
+				</table>
+			</article>
+		</div>			
 		<p id="dp"></p>
 		<input type="button" onclick="deviceInfo()" value="Let me introduce myself!">
 	</body>
