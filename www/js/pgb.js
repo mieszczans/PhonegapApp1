@@ -71,9 +71,6 @@ function onSuccess(acceleration) {
         acceleration.timestamp +
         '<br/>';
 }
-function onError() {
-    navigator.notification.alert('onError!');
-}
 
 function showSplash() {
     navigator.splashscreen.show();
@@ -90,6 +87,9 @@ function Contacts(contacts) {
     navigator.notification.alert(list)
 };
 
+function onErrorC(contactError) {
+    navigator.notification.alert('onError!');
+};
 function showContacts() {
     var optionsC = new ContactFindOptions();
     optionsC.filter = "";
