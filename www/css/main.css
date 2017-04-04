@@ -49,6 +49,12 @@ th, td{
 p{
     background-color: deepskyblue;
 }
+.start{
+    left:150px;
+}
+.stop{
+    left: 200px;
+}
 @media all and (max-width: 640px)
 and (orientation: landscape){
     .body{
