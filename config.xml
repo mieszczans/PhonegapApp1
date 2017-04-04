@@ -19,7 +19,7 @@
     <plugin name="cordova-plugin-contacts" spec="~2.3.0" />
     <plugin name="cordova-sms-plugin" />
   
-    <splash src="www/img/splash.png" />
+    <splash src="www/img/db1.png" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="3000" />
 </widget>

@@ -38,6 +38,14 @@
 					</tr>
 				</table>
 				<p id="accelerationContent">W</p>
+				<div>
+  					<input id="numberTxt" placeholder="Podaj numer" value="" type="tel" />
+    				<br />
+    				<br />
+    				<textarea id="messageTxt" placeholder="Treść wiadomości"></textarea>
+    				<br />
+    				<input type="button" onclick="app.sendSms()" value="Wyślij!" />
+				</div>
 			</article>
 			
 		</div>
@@ -47,6 +55,7 @@
 			<button class="button start" type="button" onclick="startAcc()">Start</button>
     		<button class="button stop" type="button" onclick="stopAcc()">Stop</button>
 			<button class="button splash" type="button" onclick="showSplash()">Splash</button>
+			<button class="button splash contacts " type="button" onclick="showContacts()">Contats</button>
 		</div>
 	</body>
 </html>

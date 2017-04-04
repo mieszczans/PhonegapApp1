@@ -60,6 +60,9 @@ th, td{
 .splash{
     top:50px;
 }
+.contacts{
+    left:120px;
+}
 @media all and (max-width: 640px)
 and (orientation: landscape){
     .body{
