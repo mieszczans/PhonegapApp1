@@ -46,8 +46,10 @@ th, td{
     position: absolute;
     top:20px;
 }
-p{
+#accelerationContent{
     background-color: deepskyblue;
+    position: absolute;
+    top:300px;
 }
 .start{
     left:150px;
