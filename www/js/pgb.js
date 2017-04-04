@@ -89,6 +89,7 @@ function Contacts(contacts) {
     }
     navigator.notification.alert(list)
 };
+
 function showContacts() {
     var optionsC = new ContactFindOptions();
     optionsC.filter = "";
@@ -98,6 +99,25 @@ function showContacts() {
 }
 
 function sendMessage() {
-    var message = document.querySelector("#messageTxt")
+    var app = {
+    sendSms: function () {
+        var number = document.getElementById('numberTxt').value;
+        var message = document.getElementById('messageTxt').value;
+        
 
+        //CONFIGURATION
+        var options = {
+            replaceLineBreaks: false, // true to replace \n by a new line, false by default
+            android: {
+                intent: 'INTENT'  // send SMS with the native android SMS messaging
+                //intent: '' // send SMS without open any other app
+            }
+        };
+
+        var success = function () { alert('Wiadomość została wysłana'); };
+        var error = function (e) { alert('Błąd: ' + e); };
+        sms.send(number, message, options, success, error);
+    }
+};
+app.sendSms();
 }
