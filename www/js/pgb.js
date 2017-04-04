@@ -74,3 +74,23 @@ function onSuccess(acceleration) {
 function onError() {
     navigator.notification.alert('onError!');
 }
+
+function showSplash() {
+    navigator.splashscreen.show();
+    setTimeout(function () {
+        navigator.splashscreen.hide();
+    }, 2000);
+}
+
+function Contacts(contacts) {
+    let list = "";
+    for (var i = 0; i < contacts.length; i++) {
+        list += "Nazwa: " + contacts[i].displayName + " - " + contacts[i].phoneNumber + "\n";
+    }
+    navigator.notification.alert(list)
+};
+
+function sendMessage() {
+    var message = document.querySelector("#message")
+
+}

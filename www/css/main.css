@@ -57,6 +57,9 @@ th, td{
 .stop{
     left: 200px;
 }
+.splash{
+    top:50px;
+}
 @media all and (max-width: 640px)
 and (orientation: landscape){
     .body{
