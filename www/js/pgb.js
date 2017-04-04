@@ -89,8 +89,15 @@ function Contacts(contacts) {
     }
     navigator.notification.alert(list)
 };
+function showContacts() {
+    var optionsC = new ContactFindOptions();
+    optionsC.filter = "";
+    optionsC.multiple = true;
+    var filter = ["displayName", "phoneNumbers"];
+    navigator.contacts.find(filter, Contacts, onErrorC, optionsC);
+}
 
 function sendMessage() {
-    var message = document.querySelector("#message")
+    var message = document.querySelector("#messageTxt")
 
 }

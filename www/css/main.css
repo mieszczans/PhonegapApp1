@@ -63,6 +63,10 @@ th, td{
 .contacts{
     left:120px;
 }
+.message{
+    position: absolute;
+    top:430px;
+}
 @media all and (max-width: 640px)
 and (orientation: landscape){
     .body{

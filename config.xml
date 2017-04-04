@@ -12,14 +12,14 @@
 	<platform name="android" />
 	
 	<plugin name="cordova-plugin-device" spec="~1.1.4" />
-    <plugin name="cordova-plugin-dialogs" spec="~1.3.1" />
-    <plugin name="cordova-plugin-device-motion" spec="~1.2.4" />
-    <plugin name="cordova-plugin-network-information" spec="~1.3.2" />
-    <plugin name="cordova-plugin-splashscreen" spec="~4.0.2" />
-    <plugin name="cordova-plugin-contacts" spec="~2.3.0" />
-    <plugin name="cordova-sms-plugin" />
+  <plugin name="cordova-plugin-dialogs" spec="~1.3.1" />
+  <plugin name="cordova-plugin-device-motion" spec="~1.2.4" />
+  <plugin name="cordova-plugin-network-information" spec="~1.3.2" />
+  <plugin name="cordova-plugin-splashscreen" spec="~4.0.2" />
+  <plugin name="cordova-plugin-contacts" spec="~2.3.0" />
+  <plugin name="cordova-sms-plugin" />
   
-    <splash src="www/img/db1.png" />
-    <preference name="AutoHideSplashScreen" value="true" />
-    <preference name="SplashScreenDelay" value="3000" />
+  <splash src="www/img/splash.png" />
+  <preference name="AutoHideSplashScreen" value="true" />
+  <preference name="SplashScreenDelay" value="3000" />
 </widget>
